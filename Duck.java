@@ -1,26 +1,17 @@
 package seminars;
 
-public class Duck extends Animal{
-
+public class Duck extends Animal implements Swimable, Flyable{
     public Duck(String nameAnimal, String ownerName, String diagnosis, Boolean isVactinated) {
-        super(null, null, null, null);
-    }
-
-    public Duck() {
+        super(nameAnimal, ownerName, diagnosis, isVactinated);
     }
 
     @Override
-    public void toGo(){
-        System.out.println(" Я утка и я умею ходить. ");
+    public void fly(int speed) {
+
     }
 
-     @Override
-    public void swim(){
-        System.out.println(" Я утка и я умею плавать. ");
-    }
+    @Override
+    public void swim(int speed) {
 
-     @Override
-    public void fly(){
-        System.out.println(" Я утка и я умею летать. ");
     }
 }

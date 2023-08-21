@@ -2,7 +2,7 @@
 
 package seminars;
 
-public class Animal{
+public class Animal implements Illable{
     protected String nameAnimal; // кличка животного 
     protected String ownerName; // имя хозяина
     protected String diagnosis; // диагноз
@@ -51,6 +51,11 @@ public class Animal{
 
     protected void swim(){     //Плавать
         System.out.println("Я умею плавать как " +  TYPE);
+    }
+
+    @Override
+    public void ill() {
+        System.out.println("Животное болеет ");
     }
 }
 

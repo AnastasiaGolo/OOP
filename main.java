@@ -27,8 +27,20 @@ public class main {
         
         //cat.hunt();
         Deer deer = new Deer();
-        Animal duck = new Duck();
+        //Animal duck = new Duck();
         Animal pigeon  = new Pigeon();
+        
+        //duck.toGo();
 
+        VeterinaryClinic clinic = new VeterinaryClinic();
+        clinic.addNewAnimal(new Cat2("Tom", "Nikolay", "null", false))
+                .addNewAnimal(new Dog2("Rex", "Masha", "null", true))
+                .addNewAnimal(new Human("Sasha", "Sasha", "null", false));
+        List<Illable> illables= new ArrayList<>();
+        illables.add(new Cat2("Tom", "Nikolay", "null", false));
+
+        for (Animal animal: clinic.getAnimals()) {
+            animal.ill();
+        }
     }
 }

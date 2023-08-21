@@ -1,11 +1,8 @@
 package seminars;
 
-public class Deer extends Animal{
-    public Deer(String nameAnimal, String ownerName, String diagnosis, Boolean isVactinated) {
-        super(nameAnimal, ownerName, diagnosis, isVactinated);
-    }
-
-    public Deer() {
+public class Deer extends Animal implements Swimable{
+ 
+   public Deer() {
     }
 
     @Override
@@ -14,12 +11,12 @@ public class Deer extends Animal{
     }
 
      @Override
-    public void swim(){
-        System.out.println(" Я олень и я умею плавать. ");
-    }
-
-     @Override
     public void fly(){
         System.out.println(" Я олень и я не умею летать. ");
+    }
+
+    @Override
+    public void swim(int speed) {
+
     }
 }
